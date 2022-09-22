@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff0000;
+    overflow: hidden;
+}
+
+.container {
+    width: 90vw;
+    display: flex;
+}
+
+.image {
+    height: 80vh;
+    flex: 0.5;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50px;
+    transition: all 0.4s ease-out;
+}
+
+.active {
+    flex: 5;
+}
+
+@media(max-width:480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .image:nth-of-type(6),
+    .image:nth-of-type(7),
+    .image:nth-of-type(8),
+    .image:nth-of-type(9),
+    .image:nth-of-type(10) {
+        display: none;
+    }
+
+}
